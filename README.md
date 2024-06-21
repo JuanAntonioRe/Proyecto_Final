@@ -4,7 +4,6 @@
 <!-- TODO crear requirements.txt -->
 <!-- TODO Completar README -->
 <!-- TODO Hacer código del proyecto -->
-<!-- TODO Hacer gitignore -->
-
+<!-- TODO Completar el gitignore -->
 
 
