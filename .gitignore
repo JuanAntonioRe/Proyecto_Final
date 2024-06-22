@@ -1,4 +1,4 @@
 # ambiente virtual
 /venv
-
-.gitignore
+*.jpg
+*.pdf
