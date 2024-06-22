@@ -1,2 +1,4 @@
-*.pdf
-*.jpg
+# ambiente virtual
+/venv
+
+.gitignore
