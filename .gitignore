@@ -1,4 +1,9 @@
 # ambiente virtual
 /venv
+
+# Archivos
 *.jpg
 *.pdf
+exportado.py
+
+__pycache__/
