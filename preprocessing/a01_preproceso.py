@@ -4,10 +4,10 @@ import os, sys
 sys.path.append(os.getcwd)
 
 # Importación de los datasets
-contract_df = pd.read_csv('datasets/contract.csv')
-personal_df = pd.read_csv('datasets/personal.csv')
-internet_df = pd.read_csv('datasets/internet.csv')
-phone_df = pd.read_csv('datasets/phone.csv')
+contract_df = pd.read_csv('files/datasets/input/contract.csv')
+personal_df = pd.read_csv('files/datasets/input/personal.csv')
+internet_df = pd.read_csv('files/datasets/input/internet.csv')
+phone_df = pd.read_csv('files/datasets/input/phone.csv')
 
 def limpiar_columna(data):
     # Cambia las celdas que tienen ' ' por NaN
@@ -38,6 +38,7 @@ merge_df.info()
 merge_df = merge_df.fillna('None')
 merge_df.info()
 
+merge_df.to_csv("files/datasets/intermediate/a01_merge_df_cleaned")
 
-
-#print(merge_df.head(5))
+print()
+print('Se ha guardado el csv')
