@@ -7,3 +7,7 @@
 exportado.py
 
 __pycache__/
+
+/insight/plots
+/files/datasets/intermediate
+/files/datasets/output
