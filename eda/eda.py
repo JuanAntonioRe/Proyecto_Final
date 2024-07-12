@@ -32,6 +32,7 @@ def clientes_contrato_vigente(df):
     
     # Guarda la figura
     plt.savefig(r'insight/plots/clientes_contrato_vigente.png')
+    plt.close()
 
 # Función para plot de duración de los contratos
 def duracion_contrato(df):
@@ -54,8 +55,10 @@ def duracion_contrato(df):
     ax.set_ylabel('Cantidad de clientes')
     for tick in ax.get_xticklabels():
         tick.set_rotation(90)
-        
+    
+    # Guarda la figura    
     plt.savefig(r'insight/plots/duracion_contrato.png')
+    plt.close()
     
 def cargos_mensuales(df):
     # Eliminamos la columna 'TotalCharges'
@@ -66,7 +69,10 @@ def cargos_mensuales(df):
     plt.title('Cargos mensuales')
     plt.xlabel('Cargos mensuales (USD)')
     plt.legend(['Con contrato', 'Sin contrato'])
+    
+    # Guarda la figura
     plt.savefig(r'insight/plots/cargos_mensuales.png')
+    plt.close()
 
 def pareja_hijos(df):
     dft = df[df['ContractEnd'] == 1].groupby(['Partner', 'Dependents'])['Dependents'].value_counts()
@@ -77,7 +83,10 @@ def pareja_hijos(df):
     plt.xlabel("Pareja")
     plt.ylabel("Cantidad")
     plt.legend(title="Dependientes")
+    
+    # Guarda la figura
     plt.savefig(r'insight/plots/pareja_hijos_plot.png')
+    plt.close()
 
 def tipo_de_contrato(df):
     # Gráfica de los clientes que ya no tienen contrato
@@ -93,7 +102,9 @@ def tipo_de_contrato(df):
         ax.annotate(format(p.get_height(), '.0f'), (p.get_x() + p.get_width() / 2, p.get_height()), 
                     ha = 'center', va = 'center', xytext = (0, 10), textcoords = 'offset points')
 
+    # Guarda la figura 
     plt.savefig(r'insight/plots/tipo_contrato_clientes_sin_contrato.png')
+    plt.close()
     
     # Gráfica de los clientes que siguen con contrato
     # Filtramos el DF
@@ -108,7 +119,9 @@ def tipo_de_contrato(df):
         ax.annotate(format(p.get_height(), '.0f'), (p.get_x() + p.get_width() / 2, p.get_height()), 
                     ha = 'center', va = 'center', xytext = (0, 10), textcoords = 'offset points')
 
+    # Guarda la figura
     plt.savefig(r'insight/plots/tipo_contrato_clientes_con_contrato.png')
+    plt.close()
         
 clientes_contrato_vigente(df)
 duracion_contrato(df)
