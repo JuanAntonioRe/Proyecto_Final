@@ -3,7 +3,7 @@ import numpy as np
 import os, sys
 sys.path.append(os.getcwd)
 
-# Verifica si la carpeta existe, si no la crea
+# Verifica si la carpeta existe, si no la crea. Carpeta donde se guardará el csv
 if not os.path.exists('files/datasets/intermediate/'):
     os.makedirs('files/datasets/intermediate/')
 
