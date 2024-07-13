@@ -3,6 +3,10 @@ import numpy as np
 import os, sys
 sys.path.append(os.getcwd)
 
+# Verifica si la carpeta existe, si no la crea
+if not os.path.exists('files/datasets/intermediate/'):
+    os.makedirs('files/datasets/intermediate/')
+
 # Importación de los datasets
 contract_df = pd.read_csv('files/datasets/input/contract.csv')
 personal_df = pd.read_csv('files/datasets/input/personal.csv')
@@ -35,10 +39,10 @@ merge_df = contract_df.merge(personal_df, on='customerID', how='left').merge(int
 # Checando valores NaN
 merge_df.info()
 # Se quitan los valores NaN
-merge_df = merge_df.fillna('None')
+merge_df = merge_df.fillna('Sin registro')
 merge_df.info()
 
-merge_df.to_csv("files/datasets/intermediate/a01_merge_df_cleaned")
+merge_df.to_csv('files/datasets/intermediate/a01_merge_df_cleaned.csv')
 
 print()
 print('Se ha guardado el csv')
