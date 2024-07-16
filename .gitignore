@@ -8,6 +8,6 @@ exportado.py
 
 __pycache__/
 
-/insight/plots
+/insight/
 /files/datasets/intermediate
 /files/datasets/output
