@@ -42,7 +42,7 @@ merge_df.info()
 merge_df = merge_df.fillna('Sin registro')
 merge_df.info()
 
-merge_df.to_csv('files/datasets/intermediate/a01_merge_df_cleaned.csv')
+merge_df.to_csv('files/datasets/intermediate/a01_merge_df_cleaned.csv', index=False)
 
 print()
 print('Se ha guardado el csv')

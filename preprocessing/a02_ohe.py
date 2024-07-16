@@ -48,5 +48,5 @@ df = pd.get_dummies(df, drop_first=True)
 print(df.shape)
 
 # Guardamos el dataset con codificación OHE
-df.to_csv('files/datasets/intermediate/a02_df_ohe.csv')
+df.to_csv('files/datasets/intermediate/a02_df_ohe.csv', index=False)
 
